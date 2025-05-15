@@ -39,6 +39,22 @@ class Form {
         return true
     }
 
+    /*
+    * Runs validators for all the formfields in this form.
+    * */
+    fun verifyAll(): Boolean {
+        var verified = true
+        for (form in formFields) {
+            if (!form.verify()) {
+                if (!form.errorReportingActive)
+                    form.errorReportingActive = true
+                    
+                verified = false
+            }
+        }
+        return verified
+    }
+
     private fun softVerify(): Boolean {
         return formFields.all { it.ok }
     }
