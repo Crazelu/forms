@@ -51,6 +51,8 @@ class Form {
                 }
                 form.requestFocus.value = null
                 verified = false
+            } else {
+                form.error.value = null
             }
         }
         return verified
