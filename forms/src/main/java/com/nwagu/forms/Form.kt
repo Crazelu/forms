@@ -46,9 +46,10 @@ class Form {
         var verified = true
         for (form in formFields) {
             if (!form.verify()) {
-                if (!form.errorReportingActive)
+                if (!form.errorReportingActive) {
                     form.errorReportingActive = true
-                    
+                }
+                form.requestFocus.value = null
                 verified = false
             }
         }
