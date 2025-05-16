@@ -48,6 +48,6 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
 }
 
-if (project.rootProject.file('local.properties').exists()) {
-    apply from: "${rootProject.projectDir}/publish-mavencentral.gradle"
-}
+// if (project.rootProject.file('local.properties').exists()) {
+//     apply from: "${rootProject.projectDir}/publish-mavencentral.gradle"
+// }
